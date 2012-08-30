@@ -1,0 +1,12 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <UsingTask TaskName="NitriqTeamCity.MSBuild.NitriqTeamCity" AssemblyFile="..\bin\debug\NitriqTeamCity.MSBuild.dll"/>
+  <ItemGroup>
+    <NitriqArgs Include="Nitriq.nitriqProj" />
+    <NitriqArgs Include="Nitriq.nq" />
+    <NitriqArgs Include="Nitriq.html" />
+  </ItemGroup>
+  <Target Name="CodeMetrics">
+    <Exec Command="Nitriq.Console.exe @(NitriqArgs, ' ')" WorkingDirectory="..\..\.nitriq"/>
+    <NitriqTeamCity ReportPath="..\..\.nitriq\Nitriq.html" OutputPath="teamcity-info.xml"/>
+  </Target>
+</Project>

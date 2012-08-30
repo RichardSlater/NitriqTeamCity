@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<build>
+  <statusInfo status="SUCCESS">
+    <text action="append"> total: 42</text>
+    <text action="append"> warnings: 2</text>
+    <text action="append"> errors: 0</text>
+  </statusInfo>
+  <statisticValue key="methods-to-refactor" value="0" />
+  <statisticValue key="types-to-refactor" value="0" />
+  <statisticValue key="fields-that-are-never-set" value="0" />
+  <statisticValue key="methods-that-could-be-static" value="0" />
+  <statisticValue key="methods-that-may-violate-srp" value="0" />
+  <statisticValue key="henderson-sellers-lack-of-cohesion" value="5" />
+  <statisticValue key="recursive-methods" value="0" />
+  <statisticValue key="methods-that-take-or-return-system-object" value="3" />
+  <statisticValue key="static-methods-that-instantiate-objects" value="6" />
+  <statisticValue key="assembly-breakout-info" value="18" />
+  <statisticValue key="all-properties" value="33" />
+  <statisticValue key="abstract-types-should-not-have-constructors" value="0" />
+  <statisticValue key="avoid-empty-interfaces" value="0" />
+  <statisticValue key="avoid-namespaces-with-few-types" value="0" />
+  <statisticValue key="collections-should-implement-generic-interface" value="0" />
+  <statisticValue key="do-not-declare-protected-members-in-sealed-types" value="0" />
+  <statisticValue key="do-not-declare-static-members-on-generic-types" value="0" />
+  <statisticValue key="do-not-declare-virtual-members-in-sealed-types" value="0" />
+  <statisticValue key="do-not-declare-visible-instance-fields" value="1" />
+  <statisticValue key="do-not-expose-generic-lists" value="0" />
+  <statisticValue key="enum-storage-should-be-int" value="0" />
+  <statisticValue key="exceptions-should-be-public" value="0" />
+  <statisticValue key="indexers-should-not-be-multidimensional" value="0" />
+  <statisticValue key="nested-types-should-not-be-visible" value="0" />
+  <statisticValue key="properties-should-not-be-write-only" value="0" />
+  <statisticValue key="static-holder-types-should-not-have-constructors" value="0" />
+  <statisticValue key="types-that-own-disposable-fields-should-be-disposable" value="0" />
+  <statisticValue key="uri-properties-should-not-be-strings" value="0" />
+  <statisticValue key="uri-return-values-should-not-be-string" value="0" />
+  <statisticValue key="use-events-where-appropriate" value="0" />
+  <statisticValue key="avoid-excessive-class-coupling" value="0" />
+  <statisticValue key="avoid-excessive-complexity" value="0" />
+  <statisticValue key="avoid-excessive-inheritance" value="0" />
+  <statisticValue key="review-misleading-field-names" value="0" />
+  <statisticValue key="do-not-name-enum-values-reserved" value="0" />
+  <statisticValue key="do-not-prefix-enum-values-with-type-name" value="0" />
+  <statisticValue key="events-should-not-have-before-or-after-prefix" value="0" />
+  <statisticValue key="identifiers-should-have-correct-prefix" value="0" />
+  <statisticValue key="identifiers-should-have-correct-suffix" value="0" />
+  <statisticValue key="identifiers-should-not-contain-underscores-namespaces" value="0" />
+  <statisticValue key="identifiers-should-not-contain-underscores-types" value="0" />
+  <statisticValue key="identifiers-should-not-contain-underscores-methods" value="0" />
+</build>

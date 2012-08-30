@@ -1,0 +1,1 @@
+@Nitriq.Console.exe Nitriq.nitriqProj Nitriq.nq Nitriq.html

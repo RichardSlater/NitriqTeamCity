@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23746A9F-74FF-406A-9B07-06E376901F52}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NitriqTeamCity</RootNamespace>
+    <AssemblyName>NitriqTeamCity</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VerifyArgs">
+      <HintPath>..\packages\VerifyArgs.1.0.2.0\lib\net40\VerifyArgs.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComponentModel\IFileReader.cs" />
+    <Compile Include="IO\FileReader.cs" />
+    <Compile Include="ComponentModel\IMetricParser.cs" />
+    <Compile Include="ComponentModel\IReportParser.cs" />
+    <Compile Include="ComponentModel\IParser.cs" />
+    <Compile Include="ComponentModel\IReportBreaker.cs" />
+    <Compile Include="ComponentModel\IStreamWriter.cs" />
+    <Compile Include="ComponentModel\ITeamCityInfoBuilder.cs" />
+    <Compile Include="ComponentModel\ITeamCityInfoXmlGenerator.cs" />
+    <Compile Include="ComponentModel\IXmlDocumentWriter.cs" />
+    <Compile Include="Parser.cs" />
+    <Compile Include="IO\StreamWriter.cs" />
+    <Compile Include="ComponentModel\ITextFormatter.cs" />
+    <Compile Include="Nitriq\Metric.cs" />
+    <Compile Include="Nitriq\MetricParser.cs" />
+    <Compile Include="Nitriq\ReportParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Nitriq\ReportBreaker.cs" />
+    <Compile Include="StaticParser.cs" />
+    <Compile Include="TeamCity\TeamCityInfo.cs" />
+    <Compile Include="TeamCity\TeamCityInfoBuilder.cs" />
+    <Compile Include="TeamCity\StatusTextAttributeHelper.cs" />
+    <Compile Include="TeamCity\XmlGenerator.cs" />
+    <Compile Include="TeamCity\StatisticNameFormatter.cs" />
+    <Compile Include="TeamCity\BuildStatus.cs" />
+    <Compile Include="TeamCity\StatusTextAttribute.cs" />
+    <Compile Include="IO\XmlDocumentWriter.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
