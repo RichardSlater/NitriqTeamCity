@@ -1,7 +1,7 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <UsingTask TaskName="NitriqTeamCity.MSBuild.NitriqTeamCity" AssemblyFile="..\NitriqTeamCity.MSBuild\bin\Release\NitriqTeamCity.MSBuild.dll"/>
   <ItemGroup>
-    <NitriqArgs Include="Nitriq.nitriqProj" />
+    <NitriqArgs Include="Nitriq.Release.nitriqProj" />
     <NitriqArgs Include="Nitriq.nq" />
     <NitriqArgs Include="Nitriq.html" />
   </ItemGroup>
