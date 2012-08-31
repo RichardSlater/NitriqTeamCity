@@ -1,4 +1,4 @@
-<img src="https://raw.github.com/RichardSlater/NitriqTeamCity/master/assets/logo.png" alt="NitriqTeamCity" width="510" height="209">
+<img src="https://raw.github.com/RichardSlater/NitriqTeamCity/master/assets/logo.png" alt="NitriqTeamCity" width="609" height="209">
 ======================
 
 What is NitriqTeamCity?
