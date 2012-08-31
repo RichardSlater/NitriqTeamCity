@@ -1,9 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <build>
   <statusInfo status="SUCCESS">
-    <text action="append"> total: 42</text>
-    <text action="append"> warnings: 1</text>
-    <text action="append"> errors: 0</text>
+    <text action="append">Code metrics: 42 total, 1 warnings, 0 errors.</text>
   </statusInfo>
   <statisticValue key="methods-to-refactor" value="0" />
   <statisticValue key="types-to-refactor" value="0" />

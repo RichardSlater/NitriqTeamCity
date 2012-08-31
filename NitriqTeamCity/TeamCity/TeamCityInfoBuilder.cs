@@ -13,7 +13,7 @@ namespace NitriqTeamCity.TeamCity {
         }
 
         private readonly IDictionary<string, Metric> _statistics = new Dictionary<string, Metric>();
-        private readonly IDictionary<string, int> _statusInfo = new Dictionary<string, int>();
+        private string _statusInfo;
         private bool _success;
 
         public void AddStatistics(IEnumerable<Metric> stats) {
@@ -25,16 +25,18 @@ namespace NitriqTeamCity.TeamCity {
 
         public void GenerateStatusInfo() {
             _success = !_statistics.Any(x => x.Value.Error);
-            _statusInfo.Add("total", _statistics.Count);
-            _statusInfo.Add("warnings", _statistics.Count(s => s.Value.Warning));
-            _statusInfo.Add("errors", _statistics.Count(s => s.Value.Error));
+
+            int total = _statistics.Count;
+            int warnings = _statistics.Count(s => s.Value.Warning);
+            int errors = _statistics.Count(s => s.Value.Error);
+            _statusInfo = String.Format("Code metrics: {0} total, {1} warnings, {2} errors.", total, warnings, errors);
         }
 
         public TeamCityInfo GetTeamCityInfo() {
             return new TeamCityInfo {
                 Status = _success ? BuildStatus.Success : BuildStatus.Failure,
                 Statistics = _statistics.ToDictionary(s => s.Key, s => s.Value.Value),
-                StatusInfo = _statusInfo.Select(s => String.Format(" {0}: {1}", s.Key.ToLowerInvariant(), s.Value))
+                StatusInfo = new string[] { _statusInfo }
             };
         }
     }

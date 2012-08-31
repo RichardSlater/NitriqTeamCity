@@ -79,10 +79,7 @@ namespace NitriqTeamCity.Tests {
             builder.GenerateStatusInfo();
 
             var actual = builder.GetTeamCityInfo();
-            Assert.AreEqual(3, actual.StatusInfo.Count());
-            Assert.AreEqual(" total: 3", actual.StatusInfo.First());
-            Assert.AreEqual(" warnings: 2", actual.StatusInfo.Skip(1).First());
-            Assert.AreEqual(" errors: 1", actual.StatusInfo.Last());
+            Assert.AreEqual(1, actual.StatusInfo.Count());
         }
 
         [Test]

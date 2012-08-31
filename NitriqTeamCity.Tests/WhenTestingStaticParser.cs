@@ -31,7 +31,7 @@ namespace NitriqTeamCity.Tests {
             var schemas = new XmlSchemaSet();
             schemas.Add(XmlSchema.Read(new FileStream(schemaPath, FileMode.Open), null));
             doc.Validate(schemas, (sender, e) => {
-                Assert.Fail("Validation failed with message '" + e.Message + "'");
+                Assert.Fail(String.Format("Validation failed with message '{0}'", e.Message));
             });
 
             var refXml = File.ReadAllText(refxmlPath);
