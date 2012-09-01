@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IntegrationTestAttribute.cs" />
     <Compile Include="WhenTestingFileReader.cs" />
     <Compile Include="WhenTestingNitriqReportBreaker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

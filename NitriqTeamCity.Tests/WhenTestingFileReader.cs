@@ -7,6 +7,7 @@ using System.Text;
 
 namespace NitriqTeamCity.Tests {
     [TestFixture]
+    [IntegrationTest]
     public class WhenTestingFileReader {
         [Test]
         public void SholdReadThreeLinesFromFile() {
