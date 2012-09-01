@@ -20,6 +20,8 @@ namespace NitriqTeamCity.TeamCity {
 
             output = output.Trim('-');
 
+            output = String.Format("nitriq-{0}", output);
+
             return output;
         }
     }

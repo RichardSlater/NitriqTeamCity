@@ -11,35 +11,42 @@ namespace NitriqTeamCity.Tests {
         public void ShouldConvertTextToLowercase() {
             var formatter = new StatisticNameFormatter();
             var actual = formatter.Format("AbC");
-            Assert.AreEqual("abc", actual);
+            Assert.AreEqual("nitriq-abc", actual);
         }
 
         [Test]
         public void ShouldReplaceWhitespaceWithDash() {
             var formatter = new StatisticNameFormatter();
             var actual = formatter.Format("the quick brown fox");
-            Assert.AreEqual("the-quick-brown-fox", actual);
+            Assert.AreEqual("nitriq-the-quick-brown-fox", actual);
         }
 
         [Test]
         public void ShouldReplaceMultipleDashesWithSingle() {
             var formatter = new StatisticNameFormatter();
             var actual = formatter.Format("the--quick");
-            Assert.AreEqual("the-quick", actual);
+            Assert.AreEqual("nitriq-the-quick", actual);
         }
 
         [Test]
         public void ShouldTrimLeadingAndTrailingSpaces() {
             var formatter = new StatisticNameFormatter();
             var actual = formatter.Format(" the-quick ");
-            Assert.AreEqual("the-quick", actual);
+            Assert.AreEqual("nitriq-the-quick", actual);
         }
 
         [Test]
         public void ShouldTrimLeadingAndNonAlphaCharacters() {
             var formatter = new StatisticNameFormatter();
             var actual = formatter.Format("(the-quick)");
-            Assert.AreEqual("the-quick", actual);
+            Assert.AreEqual("nitriq-the-quick", actual);
+        }
+
+        [Test]
+        public void ShouldAppendNitriqToFrontOfName() {
+            var formatter = new StatisticNameFormatter();
+            var actual = formatter.Format("The Quick");
+            Assert.AreEqual("nitriq-the-quick", actual);
         }
     }
 }

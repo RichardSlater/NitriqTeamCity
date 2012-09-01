@@ -10,6 +10,7 @@ namespace NitriqTeamCity.Tests {
     [TestFixture]
     public class WhenTestingStaticParser {
         [Test]
+        [IntegrationTest]
         public void ShouldParseNitriqHtmlProducingTeamCityInfo() {
             var basePath = @"..\..\Artifacts";
             var reportPath = Path.Combine(basePath, "Nitriq.html");
